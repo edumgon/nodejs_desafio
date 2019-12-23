@@ -11,6 +11,6 @@ RUN npm install express --save
 
 USER node
 
-EXPOSE 8080
+EXPOSE 3000
 
 CMD [ "node", "app.js" ]

@@ -4,4 +4,4 @@
 docker build -t nodejs-teste .
 
 #para subir a imagem
-docker run -it -p 8080:8080 --name nodejs nodejs-teste
+docker run -it -p 3000:3000 --name nodejs nodejs-teste
