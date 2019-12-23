@@ -11,11 +11,11 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag edumgon/nodejs-teste:$(date +%s)
+      run: docker build . --file Dockerfile --tag edumgon/nodejs-teste
 
     - name: Push the image to GPR
       run: |
         docker login docker.pkg.github.com -u edumgon -p "${GITHUB_PACKAGE_REGISTRY_TOKEN}"
-        docker push edumgon/nodejs-teste:$(date +%s)
+        docker push edumgon/nodejs-teste
       env:
         GITHUB_PACKAGE_REGISTRY_TOKEN: ${{ secrets.dockerhub }}
